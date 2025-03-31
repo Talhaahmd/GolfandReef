@@ -51,7 +51,7 @@ export const BlogSection = () => {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
           >
             <source
-              src="/assets/figma assets/9431937-uhd_2560_1440_24fps.mp4"
+              src="https://videos.pexels.com/video-files/9431937/9431937-uhd_2560_1440_24fps.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

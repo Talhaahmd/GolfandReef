@@ -3,7 +3,7 @@ export const CoreValuesSection = () => {
       <section className="relative w-full h-[120vh] overflow-hidden group">
         {/* Background Image */}
         <img
-          src="public\assets\figma assets\screenshot_25-3-2025_231330_pjmlamaidnkoemaaofddboidllnogmhe (1).jpeg"
+          src="https://epicrd.net/en/wp-content/uploads/sites/2/2024/04/004_SALA_2HFAMILY-scaled-1170x785.jpg"
           alt="Core Values"
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
         />
