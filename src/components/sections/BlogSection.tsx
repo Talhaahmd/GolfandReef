@@ -13,7 +13,11 @@ export const BlogSection = () => {
               Aston Martin Residences, Miami
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Discover the most coveted address in Miami – where legendary British design meets waterfront elegance. Aston Martin Residences is a stunning blend of architecture, engineering, and craftsmanship, offering panoramic views and an unmatched living experience.
+              Discover the most coveted address in Miami – where legendary
+              British design meets waterfront elegance. Aston Martin Residences
+              is a stunning blend of architecture, engineering, and
+              craftsmanship, offering panoramic views and an unmatched living
+              experience.
             </p>
             <ul className="list-disc list-inside text-gray-800 space-y-1 text-sm leading-6">
               <li>66-story waterfront tower with 391 residences</li>
@@ -47,7 +51,7 @@ export const BlogSection = () => {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
           >
             <source
-              src="public\assets\figma assets\9431937-uhd_2560_1440_24fps.mp4"
+              src="/assets/figma assets/9431937-uhd_2560_1440_24fps.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -73,7 +77,9 @@ export const BlogSection = () => {
               group-hover:scale-100 
               group-hover:translate-y-0"
             >
-              Where luxury meets the Caribbean breeze — immerse yourself in a world of world-class golf, private beaches, vibrant community living, and timeless coastal elegance.
+              Where luxury meets the Caribbean breeze — immerse yourself in a
+              world of world-class golf, private beaches, vibrant community
+              living, and timeless coastal elegance.
             </p>
           </div>
         </div>
