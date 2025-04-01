@@ -2,6 +2,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Masonry from "react-masonry-css";
 import { useState } from "react";
+import { LocationSection } from "@/components/sections/Location";
+import { FullscreenVideoSection } from "@/components/sections/FooterVideo";
 
 const categories = ["All", "Architecture", "Interiors", "Lifestyle", "Virtual Tours"];
 
@@ -153,8 +155,11 @@ export const GalleryPage = () => {
           ))}
         </Masonry>
       </section>
+      <LocationSection></LocationSection>
+      <FullscreenVideoSection></FullscreenVideoSection>
 
       <Footer />
     </div>
+  
   );
 };

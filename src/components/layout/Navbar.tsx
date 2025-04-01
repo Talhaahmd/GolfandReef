@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -18,17 +19,22 @@ export const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 w-full h-[88px] flex justify-between items-center px-6 md:px-12 lg:px-16 text-white bg-transparent">
       {/* Logo */}
-      <button
-        onClick={scrollToTop}
-        className="w-[90px] h-auto focus:outline-none"
-        aria-label="Scroll to top"
+      <Link
+        to="/"
+        onClick={() => {
+          if (location.pathname === "/") {
+            scrollToTop();
+          }
+        }}
+        className="w-[90px] h-auto"
+        aria-label="Go to Home"
       >
         <img
           src="https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743485464/screenshot_2025-03-28_212532-removebg-preview_k5dpov.png"
           alt="Reef & Golf Logo"
           className="w-full h-auto object-contain"
         />
-      </button>
+      </Link>
 
       {/* Nav Links */}
       <nav className="hidden max-sm:hidden md:flex justify-center items-center gap-8 font-[500] font-sans">

@@ -33,8 +33,9 @@ const Index = () => {
         <FeaturesSection />
         <FloorplanSelector />
         <GolfSection />
-        <InvestmentBenefitsSection />
         <LocationSection />
+
+        <InvestmentBenefitsSection />
         <FullscreenVideoSection />
       </main>
 

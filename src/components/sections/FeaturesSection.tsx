@@ -24,7 +24,7 @@ export const FeaturesSection = () => {
           <li>11 km from Punta Cana International Airport.</li>
         </ul>
         <a
-          href="/path-to-masterplan.pdf"
+          href="https://heyzine.com/flip-book/6ecf0173d5.html"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block border border-[#D4AF37] text-[#D4AF37] font-medium px-6 py-3 rounded-lg hover:bg-[#D4AF37] hover:text-[#0A1A2F] transition-colors duration-300"
