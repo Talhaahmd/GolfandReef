@@ -1,12 +1,12 @@
 export const Footer = () => {
   return (
-    <footer className="flex w-full flex-col items-center gap-20 bg-[#1A1818] px-16 py-20 max-md:px-8 max-md:py-[60px] max-sm:px-6 max-sm:py-10">
+    <footer className="flex w-full flex-col items-center gap-20 bg-[#1A1718] px-16 py-20 max-md:px-8 max-md:py-[60px] max-sm:px-6 max-sm:py-10">
       <div className="flex items-start gap-16 w-full max-md:flex-col">
         <div className="flex w-[864px] flex-col items-start gap-8 max-md:w-full">
           {/* Logo */}
           <div className="w-[150px]">
             <img
-              src="src\assets\Screenshot 2025-03-31 103657.png" // 🛠️ Replace with your actual logo path (e.g., /public/logo-footer.png)
+              src="src/assets/Screenshot 2025-03-31 103657.png"
               alt="Reef & Golf Logo"
               className="w-full h-auto object-contain"
             />
@@ -46,7 +46,7 @@ export const Footer = () => {
 
           {/* Social Icons (optional) */}
           <div className="flex items-start gap-3">
-            {/* Add SVG or Icon components here if needed */}
+            {/* You can insert social icons here */}
           </div>
         </div>
 

@@ -2,67 +2,53 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "Spacious Living Areas",
+    title: "Architectural Elegance",
     description:
-      "Experience expansive living and dining rooms designed for comfort and elegance.",
+      "A striking, fluid architectural design that blends modern luxury with organic lines and tropical landscaping.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Baycana-Properties-Condos-12.jpg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_231341_pjmlamaidnkoemaaofddboidllnogmhe_720_gcwcjh.jpg",
   },
   {
-    title: "Modern Integrated Kitchens",
+    title: "Private Rooftop Retreat",
     description:
-      "State-of-the-art kitchens seamlessly integrated into the living space, perfect for entertaining.",
+      "Enjoy elevated living with a rooftop plunge pool, loungers, and uninterrupted golf views.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Baycana-Properties-Condos-10.jpg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_231254_pjmlamaidnkoemaaofddboidllnogmhe_720_kitlxz.jpg",
   },
   {
-    title: "Family Room with En-Suite",
+    title: "Wellness & Fitness Center",
     description:
-      "A versatile family room complete with its own bathroom, offering privacy and convenience.",
+      "A serene wellness zone featuring modern gym equipment, yoga spaces, and holistic spa access.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Comfort-and-Convenience-in-White-Sands-1.jpeg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_23138_pjmlamaidnkoemaaofddboidllnogmhe_caroyv.jpg",
   },
   {
-    title: "Private Bedrooms with Walk-in Closets",
+    title: "Resort-Style Pool Lounge",
     description:
-      "Retreat to bedrooms featuring en-suite bathrooms and spacious walk-in closets.",
+      "A sophisticated pool deck with sunken seating, shaded cabanas, and a serene tropical backdrop.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Baycana-Properties-Condos-7.jpg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_231232_pjmlamaidnkoemaaofddboidllnogmhe_720_taf7xe.jpg",
   },
   {
-    title: "Scenic Views",
+    title: "Lush Garden Terraces",
     description:
-      "Enjoy breathtaking views of gardens, pools, and the golf course from your private terrace.",
+      "Spacious terraces surrounded by greenery, ideal for tranquil living and entertaining.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2024/10/Marina-View-Apartment-in-Cap-Cana-14.jpg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_23127_pjmlamaidnkoemaaofddboidllnogmhe_720_ua4a3y.jpg",
   },
   {
-    title: "Exclusive Gardens & Rooftops",
+    title: "Panoramic Golf Views",
     description:
-      "Select apartments offer private gardens or expansive rooftop terraces for outdoor relaxation.",
+      "Open-plan interiors with floor-to-ceiling glass overlooking the iconic Las Iguanas Golf Course.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/New-Apartment-in-Cana-Rock-Universe-2.jpg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480642/screenshot_25-3-2025_231145_pjmlamaidnkoemaaofddboidllnogmhe_j7frxg.jpg",
   },
   {
-    title: "Service Rooms",
+    title: "Grand Arrival Experience",
     description:
-      "Dedicated service rooms provide additional storage and utility space for your convenience.",
+      "A covered entryway framed by water features and greenery, creating a tranquil sense of arrival.",
     image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Beach-Apartment-in-Bavaro-Punta-Cana-1.jpg",
-  },
-  {
-    title: "Premium Appliances Included",
-    description:
-      "Each apartment comes equipped with high-end appliances for a move-in ready experience.",
-    image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Beach-Apartment-in-Bavaro-Punta-Cana-11.jpg",
-  },
-  {
-    title: "Ample Parking Space",
-    description:
-      "Benefit from secure and spacious parking facilities for residents and guests.",
-    image:
-      "https://arichyhomes.com/wp-content/uploads/2025/03/Baycana-Properties-Condos-2.jpg",
+      "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480642/screenshot_25-3-2025_231330_pjmlamaidnkoemaaofddboidllnogmhe_720_wdrn0a.jpg",
   },
 ];
 

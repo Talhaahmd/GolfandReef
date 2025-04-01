@@ -1,89 +1,150 @@
-export const BlogSection = () => {
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const taxBenefits = [
+  {
+    title: "Tax Exemptions",
+    content: "- Exempt from 3% property transfer tax.\n- 15 years free of IPI (Property Tax).",
+  },
+  {
+    title: "CONFOTUR Benefits",
+    content: "- Additional incentives for foreign investors.\n- Fast-track residency options.",
+  },
+];
+
+const ownerPerks = [
+  {
+    title: "Elite Access",
+    content: "- Priority mooring at Marina Cap Cana.\n- 24/7 concierge for yacht reservations.",
+  },
+  {
+    title: "Beach & Golf",
+    content: "- Unlimited access to Juanillo Beach Club.\n- Discounted membership at Punta Espada Golf Club.",
+  },
+  {
+    title: "Security & Health",
+    content: "- Biometric security systems.\n- On-call medical team and emergency center.",
+  },
+];
+
+const AccordionItem = ({ item, index, openIndex, setOpenIndex, theme }) => {
+  const isOpen = index === openIndex;
   return (
-    <>
-      {/* Aston Martin Residences Section */}
-      <section className="flex w-full h-screen bg-white px-0 py-0">
-        <div className="flex w-full h-full lg:flex-row flex-col">
-          {/* Left Column - Text */}
-          <div className="flex flex-col justify-center w-full lg:w-1/2 h-full px-16 py-24 max-md:px-8 max-sm:px-6">
-            <p className="text-sm uppercase text-gray-400 tracking-widest mb-2">
-              Masterpiece of Design
-            </p>
-            <h2 className="text-4xl font-semibold text-black leading-snug mb-6 max-sm:text-2xl">
-              Aston Martin Residences, Miami
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Discover the most coveted address in Miami – where legendary
-              British design meets waterfront elegance. Aston Martin Residences
-              is a stunning blend of architecture, engineering, and
-              craftsmanship, offering panoramic views and an unmatched living
-              experience.
-            </p>
-            <ul className="list-disc list-inside text-gray-800 space-y-1 text-sm leading-6">
-              <li>66-story waterfront tower with 391 residences</li>
-              <li>Private marina and superyacht access</li>
-              <li>Full-service spa and fitness center</li>
-              <li>Infinity pool overlooking Biscayne Bay</li>
-              <li>Interiors inspired by the Aston Martin legacy</li>
-            </ul>
-          </div>
-
-          {/* Right Column - Full Height Image */}
-          <div className="w-full lg:w-1/2 h-full">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/61ac2ea2e381447981413c00/2e413690-c028-46cc-8937-0856e8e2262e/Screen+Shot+2022-03-03+at+5.07.36+PM.png?format=1500w"
-              alt="Aston Martin Residences Miami"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Cap Cana Lifestyle Video Section */}
-      <section className="relative w-full h-[130vh] overflow-hidden group">
-        <div className="w-full h-full overflow-hidden relative">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
+    <div className="mb-4">
+      <button
+        className={`w-full text-left py-4 px-6 font-semibold transition border-b ${theme.text} hover:underline hover:decoration-[#D4AF37]`}
+        onClick={() => setOpenIndex(isOpen ? null : index)}
+      >
+        {item.title}
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden px-6 pb-4 text-sm whitespace-pre-line"
           >
-            <source
-              src="https://videos.pexels.com/video-files/9431937/9431937-uhd_2560_1440_24fps.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+            {item.content}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
-          {/* Hover Text and Description */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 text-center px-4">
-            <h1
-              className="text-white text-4xl font-bold 
-              opacity-0 transform scale-90 translate-y-6 
-              transition-all duration-700 
-              group-hover:opacity-100 
-              group-hover:scale-100 
-              group-hover:translate-y-0"
-            >
-              Experience The Cap Cana Lifestyle
-            </h1>
-            <p
-              className="text-white text-lg max-w-2xl mt-4
-              opacity-0 transform scale-90 translate-y-6 
-              transition-all duration-700 delay-200
-              group-hover:opacity-100 
-              group-hover:scale-100 
-              group-hover:translate-y-0"
-            >
-              Where luxury meets the Caribbean breeze — immerse yourself in a
-              world of world-class golf, private beaches, vibrant community
-              living, and timeless coastal elegance.
-            </p>
+export const InvestmentBenefitsSection = () => {
+  const [openTax, setOpenTax] = useState(null);
+  const [openPerks, setOpenPerks] = useState(null);
+
+  return (
+    <section
+      className="relative w-full py-20 px-6 bg-white text-[#0A1A2F]"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_23138_pjmlamaidnkoemaaofddboidllnogmhe_caroyv.jpg')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-serif text-center mb-16">
+          Invest in Unmatched Value
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Left Column - Tax Benefits */}
+          <div className="bg-[#FDF7E3] p-6 rounded-xl shadow-md">
+            <h3 className="text-2xl font-serif mb-4 text-[#D4AF37]">Tax Benefits</h3>
+            {taxBenefits.map((item, i) => (
+              <AccordionItem
+                key={i}
+                item={item}
+                index={i}
+                openIndex={openTax}
+                setOpenIndex={setOpenTax}
+                theme={{ text: "text-[#0A1A2F]" }}
+              />
+            ))}
+          </div>
+
+          {/* Right Column - Owner Perks */}
+          <div className="bg-[#0A1A2F] p-6 rounded-xl shadow-md text-white">
+            <h3 className="text-2xl font-serif mb-4 text-[#D4AF37]">Owner Perks</h3>
+            {ownerPerks.map((item, i) => (
+              <AccordionItem
+                key={i}
+                item={item}
+                index={i}
+                openIndex={openPerks}
+                setOpenIndex={setOpenPerks}
+                theme={{ text: "text-white" }}
+              />
+            ))}
           </div>
         </div>
-      </section>
-    </>
+        {/* Disclaimer */}
+        
+      </div>
+      {/* Call to Action Form */}
+<div className="mt-20 text-center">
+  <h3 className="text-3xl font-semibold text-[#0A1A2F]">
+    Ready to make us your home?
+  </h3>
+  <p className="text-sm text-gray-500 mt-1">
+    Drop your info, and we’ll connect with you soon
+  </p>
+
+  <form className="mt-6 flex flex-col md:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
+    <input
+      type="text"
+      placeholder="Name"
+      className="w-full md:w-1/3 border px-4 py-3 rounded-md"
+      required
+    />
+    <input
+      type="email"
+      placeholder="Email"
+      className="w-full md:w-1/3 border px-4 py-3 rounded-md"
+      required
+    />
+    <input
+      type="tel"
+      placeholder="Phone number"
+      className="w-full md:w-1/3 border px-4 py-3 rounded-md"
+      required
+    />
+    <button
+      type="submit"
+      className="bg-[#D4AF37] text-white font-medium px-6 py-3 rounded-md hover:bg-[#c89e2f] transition-all mt-4 md:mt-0"
+    >
+      Book a tour
+    </button>
+  </form>
+</div>
+
+    </section>
   );
 };

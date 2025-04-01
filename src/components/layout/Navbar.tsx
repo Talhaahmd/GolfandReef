@@ -1,43 +1,43 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full h-[72px] flex justify-between items-center bg-transparent backdrop-blur-md px-16 text-white">
+    <header className="fixed top-0 z-50 w-full h-[88px] flex justify-between items-center px-6 md:px-12 lg:px-16 text-white bg-transparent">
       {/* Logo */}
-      <div className="flex w-20 h-10 justify-center items-center">
+      <div className="w-[90px] h-auto">
         <img
-          src="src/assets/Screenshot 2025-03-31 103657.png" // Use forward slashes
-          alt="BestinPro Logo"
-          className="h-9 w-auto object-contain"
+          src="https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743485464/screenshot_2025-03-28_212532-removebg-preview_k5dpov.png"
+          alt="Reef & Golf Logo"
+          className="w-full h-auto object-contain"
         />
       </div>
 
       {/* Nav Links */}
-      <nav className="flex justify-center items-center gap-8 max-sm:hidden">
-        <div className="flex justify-end items-center gap-8">
-          <a href="#lifestyle" className="text-white text-base font-normal leading-6">
-            Lifestyle
+      <nav className="hidden max-sm:hidden md:flex justify-center items-center gap-8 font-[500] font-sans">
+        {["Apartments", "Amenities", "Location", "Contact"].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="relative text-white text-base transition-all duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all after:duration-300"
+          >
+            {item}
           </a>
-          <a href="#residences" className="text-white text-base font-normal leading-6">
-            Residences
-          </a>
-          <a href="#amenities" className="text-white text-base font-normal leading-6">
-            Amenities
-          </a>
-          <a href="#contact" className="text-white text-base font-normal leading-6">
-            Contact Us
-          </a>
-          <a href="#vision" className="text-white text-base font-normal leading-6">
-            Our Vision
-          </a>
-        </div>
+        ))}
+
+        <Link
+          to="/gallery"
+          className="relative text-white text-base transition-all duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all after:duration-300"
+        >
+          Gallery
+        </Link>
       </nav>
 
       {/* Mobile Menu Button */}
       <button
-        className="hidden max-sm:block"
+        className="block md:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
