@@ -9,16 +9,16 @@ const slides = [
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_231341_pjmlamaidnkoemaaofddboidllnogmhe_720_gcwcjh.jpg",
   },
   {
-    title: "Private Rooftop Retreat",
+    title: "Ambience And Remarkable Furniture",
     description:
-      "Enjoy elevated living with a rooftop plunge pool, loungers, and uninterrupted golf views.",
+      "An immersive blend of elegant ambiance and handpicked, luxurious furniture that defines refined living.",
     image:
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_231254_pjmlamaidnkoemaaofddboidllnogmhe_720_kitlxz.jpg",
   },
   {
-    title: "Ambience And Remarkable Furniture",
+    title: "Penthouse Rooftop Retreat",
     description:
-      "An immersive blend of elegant ambiance and handpicked, luxurious furniture that defines refined living.",
+      "Enjoy elevated living with a rooftop plunge pool, loungers, and uninterrupted golf views. ",
     image:
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_23138_pjmlamaidnkoemaaofddboidllnogmhe_caroyv.jpg",
   },
