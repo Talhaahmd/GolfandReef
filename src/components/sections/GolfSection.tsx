@@ -16,9 +16,9 @@ const slides = [
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_231254_pjmlamaidnkoemaaofddboidllnogmhe_720_kitlxz.jpg",
   },
   {
-    title: "Wellness & Fitness Center",
+    title: "Ambience And Remarkable Furniture",
     description:
-      "A serene wellness zone featuring modern gym equipment, yoga spaces, and holistic spa access.",
+      "An immersive blend of elegant ambiance and handpicked, luxurious furniture that defines refined living.",
     image:
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_23138_pjmlamaidnkoemaaofddboidllnogmhe_caroyv.jpg",
   },
@@ -37,9 +37,9 @@ const slides = [
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480643/screenshot_25-3-2025_23127_pjmlamaidnkoemaaofddboidllnogmhe_720_ua4a3y.jpg",
   },
   {
-    title: "Panoramic Golf Views",
+    title: "Wellness And Fitness Center",
     description:
-      "Open-plan interiors with floor-to-ceiling glass overlooking the iconic Las Iguanas Golf Course.",
+      "A serene wellness zone featuring modern gym equipment, yoga spaces, and holistic spa access.",
     image:
       "https://res.cloudinary.com/dt3ufcdjs/image/upload/v1743480642/screenshot_25-3-2025_231145_pjmlamaidnkoemaaofddboidllnogmhe_j7frxg.jpg",
   },
@@ -58,7 +58,7 @@ export const GolfSection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 8000); // slower transition
 
     return () => clearInterval(timer);
   }, []);
@@ -67,18 +67,21 @@ export const GolfSection = () => {
 
   return (
     <section
+      id="amenities"
       className="relative w-full h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000"
       style={{ backgroundImage: `url(${activeSlide.image})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 z-0" />
+      <div className="absolute inset-0 bg-black/50 z-0" />
 
       {/* Text Content */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full px-16 max-md:px-8 max-sm:px-6 text-white">
-        <h2 className="text-3xl md:text-5xl font-semibold mb-4">
+      <div className="relative z-10 flex flex-col items-start justify-center h-full px-16 max-md:px-8 max-sm:px-6 text-white transition-opacity duration-1000 ease-in-out">
+        <h2 className="text-3xl md:text-5xl font-semibold mb-4 animate-fade-in">
           {activeSlide.title}
         </h2>
-        <p className="text-lg max-w-2xl">{activeSlide.description}</p>
+        <p className="text-lg max-w-2xl animate-fade-in delay-200">
+          {activeSlide.description}
+        </p>
       </div>
 
       {/* Dots Navigation */}

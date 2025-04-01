@@ -47,7 +47,6 @@ const Index = () => {
             onClick={() => setShowGallery(false)}
             className="fixed top-6 right-6 text-white bg-black/30 px-3 py-1 rounded hover:bg-black/50"
           >
-            Close
           </button>
           <GallerySection />
         </div>

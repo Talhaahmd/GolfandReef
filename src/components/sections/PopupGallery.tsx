@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const PopupGallery = ({ isOpen, onClose }) => {
+export const GallerySection = ({ isOpen, onClose }) => {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);

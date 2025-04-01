@@ -40,7 +40,7 @@ const galleryItems = [
     type: "video",
     title: "Photorealistic Interior Experience",
     category: "Interiors",
-    src: "https://res.cloudinary.com/dt3ufcdjs/video/upload/v1743487603/Professional_Mode_Ultra_photorealistic_first_perso_gqwdud.mp4",
+    src: "https://res.cloudinary.com/dt3ufcdjs/video/upload/v1743489815/Professional_Mode_Ultra_photorealistic_first_perso_gqwdud.mp4",
   },
   {
     type: "video",
